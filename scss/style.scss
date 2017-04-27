@@ -1,0 +1,113 @@
+@import 'layout';
+@import 'variables';
+@import 'font';
+
+.navbar {
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  margin-bottom: 0px;
+  background-color: white;
+  box-shadow: 0px 4px 42px -9px rgba(0,0,0,0.75);
+
+  .navbar-left, .navbar-center, .navbar-right {
+    float: left;
+    text-align: center;
+    margin: 15px 0;
+    width: 33%;
+  }
+
+  .navbar-left, .navbar-right {
+    margin: 34px 0
+  }
+}
+
+.mySlides {
+  display:none;
+}
+
+
+.hero .caption {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 325px;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 0px 10px #000000;
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+}
+
+
+// Using CSS to get the images to allow for easier resizing through devices
+.slideshow {
+  .coffee {
+    background: url("../img/img-coffee.jpg") no-repeat center;
+    background-size: cover;
+  }
+  .kitchen {
+    background: url("../img/img-kitchen.jpg") no-repeat center;
+    background-size: cover;
+  }
+  .citrus {
+    background: url("../img/img-citrus.jpg") no-repeat center;
+    background-size: cover;
+  }
+}
+
+.about {
+  padding: 80px 0;
+  font-family: $secondaryFont;
+
+  .container {
+    text-align: center;
+
+    p {
+      line-height: 40px;
+    }
+  }
+}
+
+.menu {
+  background: url("../img/img-broccoli.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  padding: 150px 0 50px 0;
+
+  .container {
+    background-color: white;
+    height: 800px;
+
+    .filterBar {
+      background-color: lightGrey;
+      width: 100%;
+      height: 80px;
+
+      ul {
+        margin: 0 auto;
+        height: 80px;
+
+        a {
+          margin-top: 20px;
+          padding: 20px 0;
+          li {
+            position: relative;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+          }
+        }
+        a:hover {
+          background-color: darkGrey;
+        }
+      }
+    }
+  }
+}
