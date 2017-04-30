@@ -81,33 +81,63 @@
   width: 100%;
   padding: 150px 0 50px 0;
 
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 72px;
+  }
+
   .container {
     background-color: white;
-    height: 800px;
+    height: auto;
+    padding: 0px;
+    padding-bottom: 20px;
 
     .filterBar {
       background-color: lightGrey;
       width: 100%;
       height: 80px;
 
-      ul {
-        margin: 0 auto;
-        height: 80px;
-
-        a {
-          margin-top: 20px;
-          padding: 20px 0;
-          li {
-            position: relative;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-          }
-        }
-        a:hover {
-          background-color: darkGrey;
-        }
+      div {
+        padding: 32px 0;
+        text-align: center;
+        color: black;
       }
+      div:hover {
+        background-color: Grey;
+        color: white;
+      }
+
+    }
+    table {
+    border-collapse: collapse;
+    width: 95%;
+    margin: 40px auto 0;
+
+      button {
+        background-color: $primaryColor;
+        color: $secondaryColor;
+      }
+
+      // Toggle display of expanded block
+      .expanded {
+        display: none;
+      }
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    .td-right {
+      text-align: right;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2}
+
+    th {
+      font-size: 32px;
     }
   }
 }

@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>Nikau Cafe</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="scss/style.css">
   </head>
   <body>
     <nav id="navbar" class="navbar">
@@ -28,7 +29,7 @@
     <div class="hero" id="hero">
       <div class="fullWidth-container">
         <div class="caption">
-          <h1>Nikau Cafe</h1>
+          <h1>NIKAU CAFE</h1>
           <h3>Est. 1998</h3>
         </div>
         <div class="slideshow">
@@ -48,18 +49,147 @@
     </div>
 
     <div class="menu" id="menu">
+      <h1>MENU</h1>
       <div class="container">
         <div class="filterBar">
-          <ul>
-            <a><li class="span_1_of_4">Coffee & Tea</li></a>
-            <a><li class="span_1_of_4">Baking</li></a>
-            <a><li class="span_1_of_4">Breakfast</li></a>
-            <a><li class="span_1_of_4">Lunch</li></a>
-          </ul>
+          <a class="coffeeButton">
+            <div class="col-md-3">
+              Coffee & Tea
+            </div>
+          </a>
+          <a class="bakingButton">
+            <div class="col-md-3">
+              Baking
+            </div>
+          </a>
+          <a class="breakfastButton">
+            <div class="col-md-3">
+              Breakfast
+            </div>
+          </a>
+          <a class="lunchButton">
+            <div class="col-md-3">
+              Lunch
+            </div>
+          </a>
         </div>
+
+        <table class="coffeeTable">
+          <tr>
+            <th>Coffee & Tea</th>
+            <th></th>
+            <th>Price</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>Short Black</td>
+            <td></td>
+            <td>$2.50</td>
+            <td class="td-right"><button class="btn expandButton"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+          </tr>
+
+          <tr class="expanded">
+            <td class="description"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></td>
+            <td></td>
+            <td>
+              <form class="">
+                <input type="number" name="quantity" value="0" min="0" max="99">Quantity
+
+              </form>
+            </td>
+            <td class="td-right"><button class="btn"><i class="fa fa-plus" aria-hidden="true"></i> Add to Order</button></td>
+          </tr>
+
+          <tr>
+            <td>Long Black</td>
+            <td></td>
+            <td>$3.60</td>
+            <td class="td-right"><button class="btn"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+          </tr>
+
+          <tr>
+            <td>Flat White</td>
+            <td></td>
+            <td>4.00</td>
+            <td class="td-right"><button class="btn"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+          </tr>
+
+          <tr>
+            <td>Cappuccino</td>
+            <td></td>
+            <td>$4.20</td>
+            <td class="td-right"><button class="btn"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+          </tr>
+
+          <tr>
+            <td>Latte</td>
+            <td></td>
+            <td>$4.80</td>
+            <td class="td-right"><button class="btn"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+          </tr>
+
+          <tr>
+            <td>Americano</td>
+            <td></td>
+            <td>$3.50</td>
+            <td class="td-right"><button class="btn"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+          </tr>
+
+          <tr>
+            <td>Mochaccino</td>
+            <td></td>
+            <td>$4.40</td>
+            <td class="td-right"><button class="btn"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+          </tr>
+
+          <tr>
+            <td>Mint Tea</td>
+            <td></td>
+            <td>$3.80</td>
+            <td class="td-right"><button class="btn"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+          </tr>
+
+          <tr>
+            <td>Honey and Ginger Tea</td>
+            <td></td>
+            <td>$3.80</td>
+            <td class="td-right"><button class="btn"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+          </tr>
+
+          <tr>
+            <td>Loose Leaf Tea</td>
+            <td></td>
+            <td>$3.80</td>
+            <td class="td-right"><button class="btn"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+          </tr>
+
+          <tr>
+            <td>Earl Grey Tea</td>
+            <td></td>
+            <td>$3.80</td>
+            <td class="td-right"><button class="btn"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+          </tr>
+
+          <tr>
+            <td>English Breakfast Tea</td>
+            <td></td>
+            <td>$3.80</td>
+            <td class="td-right"><button class="btn"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+          </tr>
+
+          <tr>
+            <td>Green Tea</td>
+            <td></td>
+            <td>$3.80</td>
+            <td class="td-right"><button class="btn"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+          </tr>
+
+        </table>
       </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
