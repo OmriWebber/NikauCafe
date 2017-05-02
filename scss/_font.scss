@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans');
 
 @font-face {
   font-family: 'TravelingTypewriter';
@@ -12,4 +12,6 @@ body {
 
 h1, h2, h3, h4, h5 {
   font-family: $secondaryFont;
+  font-weight: 600;
+  letter-spacing: 3px;
 }
