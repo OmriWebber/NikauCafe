@@ -3,6 +3,7 @@
 @import 'layout';
 @import 'variables';
 @import 'font';
+@import 'responsive';
 
 .navbar {
   height: 100px;
@@ -12,21 +13,100 @@
   margin-bottom: 0px;
   background-color: white;
   box-shadow: 0px 4px 42px -9px rgba(0,0,0,0.75);
+  border-radius: 0px;
 
-  .navbar-left, .navbar-center, .navbar-right {
-    float: left;
-    text-align: center;
-    margin: 15px 0;
-    width: 33%;
+  .navbar-brand {
+    transform: translateX(-50%);
+    left: 51%;
+    position: absolute;
   }
 
-  .navbar-left, .navbar-right {
-    margin: 34px 0
+  .navbar-nav {
+    margin-top: 20px;
   }
 }
 
+.cartButtonHidden {
+  display: none !important;
+}
+
+
 .mySlides {
   display:none;
+}
+
+.dropdownNav {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 100px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(240,240,240,0.95);
+
+  ul {
+
+    a {
+
+      text-decoration: none;
+      color: black;
+
+      li {
+        padding: 20px 0;
+        width: 100%;
+      }
+
+      li:hover {
+        background-color: rgba(200,200,200,0.95);
+        color: $primaryColor;
+      }
+    }
+  }
+}
+
+.cartCountBg {
+  background-color: $primaryColor;
+  border-radius: 10px;
+  width:16px;
+  height: 16px;
+  position: absolute;
+  top: 12px;
+  left: 35px;
+}
+
+.cartCount {
+  border-radius: 10px;
+  width:16px;
+  height: 16px;
+  position: absolute;
+  top: 10px;
+  left: 39px;
+  font-size: 12px;
+  color: white;
+  font-family: $secondaryFont;
+}
+
+.cartDropdown {
+  position: fixed;
+  display: none;
+  background-color: rgba(240,240,240,0.95);
+  width: 100%;
+  z-index: 9999;
+  top: 100px;
+
+  .container {
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+
+    ul {
+
+      li {
+        text-decoration: none;
+        list-style-type: none;
+      }
+    }
+  }
 }
 
 
@@ -63,6 +143,10 @@
     background: url("../img/img-citrus.jpg") no-repeat center;
     background-size: cover;
   }
+  .ravioli {
+    background: url("../img/img-ravioli.jpg") no-repeat center;
+    background-size: cover;
+  }
 }
 
 .about {
@@ -82,12 +166,14 @@
   background: url("../img/img-broccoli.jpg") no-repeat center;
   background-size: cover;
   width: 100%;
-  padding: 150px 0 50px 0;
+  padding: 100px 0 50px 0;
 
   h1 {
     text-align: center;
     color: white;
     font-size: 72px;
+    margin-bottom: 80px;
+    text-shadow: 0px 0px 10px #000000;
   }
 
   .container {
@@ -165,6 +251,10 @@
   h1,h2 {
     text-align: center;
   }
+}
+
+.productTitle{
+  display: none;
 }
 
 .photos {

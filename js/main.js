@@ -15,73 +15,99 @@ function carousel() {
 }
 
 $(document).ready(function(){
-	// variables
+	// Menu Expand Variables
 	var itemExpanded = $(".expanded");
 	var expandButton = $(".expandButton");
+
+  // Menu Filter Variables
   var coffeeButton = $(".coffeeButton");
   var coffeeTable = $(".coffeeTable");
+  var bakingButton = $(".bakingButton");
+  var bakingTable = $(".bakingTable");
+  var breakfastButton = $(".breakfastButton");
+  var breakfastTable = $(".breakfastTable");
+  var lunchButton = $(".lunchButton");
+  var lunchTable = $(".lunchTable");
+
+  // Navbar Variables
+  var hamburgerMenu = $(".hamburgerMenu");
+  var dropdownNav = $(".dropdownNav");
+  var menuItem = $(".dropdownNav li");
+  var cartButton = $(".cartButton");
+  var cartDropdown = $(".cartDropdown");
 
 
 
-	//Expanded Items show/hide
-	expandButton.click(function(){
-		if (itemExpanded.is(":visible")) {
-			itemExpanded.fadeOut('1000');
-			itemExpanded.hide('slow');
+  //Expanded menu show/hide
+	hamburgerMenu.click(function(){
+		if (dropdownNav.is(":visible")) {
+			dropdownNav.fadeOut('500');
+			dropdownNav.hide('');
 		}
 		else {
-		  itemExpanded.fadeIn('1000');
-			itemExpanded.show();
+		  dropdownNav.fadeIn('500');
+			dropdownNav.show();
+		}
+	});
+  // When an item on the menu is clicked, Hide dropdownNav
+  menuItem.click(function(){
+		if (dropdownNav.is(":visible")) {
+			dropdownNav.fadeOut('1000');
+			dropdownNav.hide('slow');
 		}
 	});
 
-  //Coffee Menu show/hide
-	coffeeButton.click(function(){
-		if (coffeeTable.is(":visible")) {
-			coffeeTable.fadeOut('1000');
-			coffeeTable.hide('slow');
+  //CartDropdown Show/Hide
+	cartButton.click(function(){
+		if (cartDropdown.is(":visible")) {
+			cartDropdown.fadeOut('500');
+			cartDropdown.hide('');
 		}
 		else {
-		  coffeeTable.fadeIn('1000');
-			coffeeTable.show();
+		  cartDropdown.fadeIn('500');
+			cartDropdown.show();
 		}
 	});
 
-  //Baking Menu show/hide
-	bakingButton.click(function(){
-		if (bakingTable.is(":visible")) {
-			bakingTable.fadeOut('1000');
-			bakingTable.hide('slow');
-		}
-		else {
-		  bakingTable.fadeIn('1000');
-			bakingTable.show();
-		}
-	});
 
-  //Breakfast Menu show/hide
-	Button.click(function(){
-		if (breakfastTable.is(":visible")) {
-			breakfastTable.fadeOut('1000');
-			breakfastTable.hide('slow');
-		}
-		else {
-		  breakfastTable.fadeIn('1000');
-			breakfastTable.show();
-		}
-	});
+  $("#coffeeButton").click(function() {
+    $(".coffeeTable").fadeIn(500);
+    $("div:not(.coffeeTable)").fadeOut(0);
+    $("#coffeeButton").addClass("active");
+    $(":not(#coffeeButton)").removeClass("active");
+  });
+  $("#b").click(function() {
+    $(".b").fadeIn(500);
+    $("div:not(.b)").fadeOut(0);
+    $("#b").addClass("active");
+    $(":not(#b)").removeClass("active");
+  });
+  $("#c").click(function() {
+    $(".c").fadeIn(500);
+    $("div:not(.c)").fadeOut(0);
+    $("#c").addClass("active");
+    $(":not(#c)").removeClass("active");
+  });
+  $("#d").click(function() {
+    $(".d").fadeIn(500);
+    $("div:not(.d)").fadeOut(0);
+    $("#d").addClass("active");
+    $(":not(#d)").removeClass("active");
+  });
 
-  //Coffee show/hide
-	lunchButton.click(function(){
-		if (lunchTable.is(":visible")) {
-			lunchTable.fadeOut('1000');
-			lunchTable.hide('slow');
-		}
-		else {
-		  lunchTable.fadeIn('1000');
-			lunchTable.show();
-		}
-	});
+
+  $(function() {
+    $("td[colspan=3]").find("p").hide();
+    $("expandButton").click(function(event) {
+        event.stopPropagation();
+        var $target = $(event.target);
+        if ( $target.closest("td").attr("colspan") > 1 ) {
+            $target.slideUp();
+        } else {
+            $target.closest("tr").next().find("p").slideToggle();
+        }
+    });
+  });
 
 });
 
