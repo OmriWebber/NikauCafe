@@ -24,7 +24,7 @@
             <li><a>
               <i class="fa fa-shopping-cart fa-2x cartButton" aria-hidden="true"></i>
                 <div class="cartCountBg"></div>
-                <span class="cartCount">1</span>
+                <span class="cartCount">0</span>
             </a></li>
             <li><a href="#"><i class="fa fa-bars fa-2x hamburgerMenu" aria-hidden="true"></i></a></li>
           </ul>
@@ -49,11 +49,24 @@
         <ul id="Cart"></ul>
 
         <button id="Clear">Clear Cart</button>
+        <button id="orderComplete">Complete Order</button>
+      </div>
+    </div>
+
+    <div class="contact" id="contact">
+      <div class="contactBackground">
+          <div class="container">
+            <h1>Contact Us</h1>
+            <form class="" action="index.html" method="post">
+              <input type="text" name="" value="">
+              <input type="text" name="" value="">
+            </form>
+          </div>
       </div>
     </div>
 
     <div class="hero" id="hero">
-      <div class="fullWidth-container">
+      <div class="container-fluid">
         <div class="caption">
           <h1>NIKAU CAFE</h1>
           <h3>Est. 1998</h3>
@@ -79,25 +92,96 @@
       <h1>MENU</h1>
       <div class="container" id="menu">
         <div class="filterBar">
-          <div class="col-md-3" id="coffeeButton">
+          <div class="col-md-3 filterButton coffeeButton" id="coffeeButton">
             Coffee & Tea
           </div>
-          <div class="col-md-3" id="bakingButton">
+          <div class="col-md-3 filterButton bakingButton" id="bakingButton">
             Baking
           </div>
-          <div class="col-md-3" id="breakfastButton">
+          <div class="col-md-3 filterButton breakfastButton" id="breakfastButton">
             Breakfast
           </div>
-          <div class="col-md-3" id="lunchButton">
+          <div class="col-md-3 filterButton lunchButton" id="lunchButton">
             Lunch
           </div>
         </div>
 
-        <table class="coffeeTable">
+        <table class="coffeeTable menuTable">
           <tr>
             <!-- Table Headings -->
             <th>Coffee & Tea</th>
             <th></th>
+            <th>Price</th>
+            <th></th>
+          </tr>
+
+          <tr>
+            <tr>
+              <td>Short Black</td>
+              <td></td>
+              <td>$2.50</td>
+              <td class="td-right"><button class="btn expandButton"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+            </tr>
+            <tr class="expanded">
+              <td class="description" colspan="3"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></td>
+              <td></td>
+              <td class="td-right"><p class="productTitle">Short Black</p><button class="btn Add"><i class="fa fa-plus" aria-hidden="true"></i> Add to Order</button></td>
+            </tr>
+          </tr>
+
+          <tr>
+            <tr>
+              <td>Short Black</td>
+              <td></td>
+              <td>$2.50</td>
+              <td class="td-right"><button class="btn expandButton"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+            </tr>
+            <tr class="expanded">
+              <td class="description" colspan="3"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></td>
+              <td></td>
+              <td class="td-right"><p class="productTitle">Short Black</p><button class="btn Add"><i class="fa fa-plus" aria-hidden="true"></i> Add to Order</button></td>
+            </tr>
+          </tr>
+
+          <tr>
+            <tr>
+              <td>Long Black</td>
+              <td></td>
+              <td>$3.60</td>
+              <td class="td-right"><button class="btn expandButton"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+            </tr>
+            <tr class="expanded">
+              <td class="description" colspan="3"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></td>
+              <td></td>
+              <td class="td-right"><p class="productTitle">Long Black</p><button class="btn Add"><i class="fa fa-plus" aria-hidden="true"></i> Add to Order</button></td>
+            </tr>
+          </tr>
+
+          <tr>
+            <tr>
+              <td>Flat White</td>
+              <td></td>
+              <td>$4.00</td>
+              <td class="td-right"><button class="btn expandButton"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+            </tr>
+            <tr class="expanded">
+              <td class="description" colspan="3"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></td>
+              <td>
+                <form class="">
+                  <input type="checkbox" name="" value="">Soy Milk
+                </form>
+              </td>
+              <td class="td-right"><p class="productTitle">Flat White</p><button class="btn Add"><i class="fa fa-plus" aria-hidden="true"></i> Add to Order</button></td>
+            </tr>
+          </tr>
+
+        </table>
+
+        <table class="bakingTable menuTable">
+          <tr>
+            <!-- Table Headings -->
+            <th>Baking</th>
+            <th>Options</th>
             <th>Price</th>
             <th></th>
           </tr>
@@ -109,6 +193,7 @@
           </tr>
           <tr class="expanded">
             <td class="description" colspan="3"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></td>
+            <td></td>
             <td></td>
             <td class="td-right"><p class="productTitle">Short Black</p><button class="btn Add"><i class="fa fa-plus" aria-hidden="true"></i> Add to Order</button></td>
           </tr>
@@ -197,19 +282,26 @@
             <td>$3.80</td>
             <td class="td-right"><button class="btn"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
           </tr>
-
         </table>
 
-        <table class="bakingTable">
-          bakingTable
+        <table class="breakfastTable menuTable">
+          <tr>
+            <!-- Table Headings -->
+            <th>Breakfast</th>
+            <th>Options</th>
+            <th>Price</th>
+            <th></th>
+          </tr>
         </table>
 
-        <table class="breakfastTable">
-          breakfastTable
-        </table>
-
-        <table class="lunchTable">
-          lunchTable
+        <table class="lunchTable menuTable">
+          <tr>
+            <!-- Table Headings -->
+            <th>Lunch</th>
+            <th>Options</th>
+            <th>Price</th>
+            <th></th>
+          </tr>
         </table>
       </div>
     </div>
@@ -218,7 +310,7 @@
       <div class="container">
         <h1>location</h1>
         <h2>Civic Square, 101 Wakefield Street<br>Wellington 6011</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1260.4761117451164!2d174.77765801469675!3d-41.288533877906815!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x63ea367e599b5c7d!2sNikau+Cafe!5e0!3m2!1sen!2suk!4v1493686834538" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1260.4761117451164!2d174.77765801469675!3d-41.288533877906815!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x63ea367e599b5c7d!2sNikau+Cafe!5e0!3m2!1sen!2suk!4v1493686834538" width="100%" height="400" style="border:0" allowfullscreen></iframe>
       </div>
     </div>
 
@@ -257,7 +349,7 @@
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="js/CartFunction.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/CartFunction.js" ></script>
   </body>
 </html>

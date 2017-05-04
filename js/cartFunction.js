@@ -56,7 +56,7 @@ $(document).ready(function(){
 			});
 			localStorage.setItem("items", JSON.stringify(cart));
 			$(".empty").remove();
-			$("#Cart").append("<li class='"+ ClassName + "'>"+ value + " - " + quantity +"</li>");			
+			$("#Cart").append("<li class='"+ ClassName + "'>"+ value + " - " + quantity +"</li>");
 		}
 		CartCount();
 	});
@@ -94,7 +94,7 @@ $(document).ready(function(){
 			localStorage.setItem("items", JSON.stringify(cart));
 		}
 		CartCount();
-	})	
+	})
 
 	//Empty your entire cart and your Local Storage
 	$('#Clear').click(function(){
