@@ -1,7 +1,16 @@
 $(document).ready(function(){
 	// Menu Expand Variables
-	var itemExpanded = $(".expanded");
+	var expanded = $(".expanded");
 	var expandButton = $(".expandButton");
+
+	// Contact Variables
+	var contact = $(".contact");
+	var contactButton = $(".contactButton");
+	var contactCloseButton = $(".contactCloseButton");
+	var contactSubmitButton = $(".submitButton");
+	var contactSuccess = $(".contactSuccess");
+	var contactForm = $(".contactForm");
+
 
   // Menu Filter Variables
   var coffeeButton = $("#coffeeButton");
@@ -50,6 +59,32 @@ $(document).ready(function(){
       cartDropdown.hide();
 		}
 	});
+
+	//Contact show/hide
+	contactButton.click(function(){
+		if (contact.is(":visible")) {
+			contact.fadeOut('500');
+			contact.hide('');
+		}
+		else {
+		  contact.fadeIn('500');
+			contact.show();
+		}
+	});
+
+	//Contact Close Button show/hide
+	contactCloseButton.click(function(){
+			contact.fadeOut('500');
+			contact.hide('');
+	});
+
+	//Contact Submit Button Action show/hide
+	contactSubmitButton.click(function(){
+			contactForm.fadeOut('500');
+			contactForm.hide('');
+			contactSuccess.delay('slow').fadeIn('500');
+	});
+
   // When an item on the menu is clicked, Hide dropdownNav
   menuItem.click(function(){
 		if (dropdownNav.is(":visible")) {
@@ -71,11 +106,17 @@ $(document).ready(function(){
 		}
 	});
 
-
-  expandButton.click(function() {
-    var expandVar = $(this).parent().parent().find(itemExpanded);
-    expandVar.slideUp();
-  });
+	$(function() {
+    $(expandButton).click(function(event) {
+        event.stopPropagation();
+        var $target = $(event.target);
+        if ( $target.closest("td").attr("colspan") > 1 ) {
+            $target.slideUp();
+        } else {
+            $target.closest("tr").next().slideToggle();
+        }
+    });
+});
 
 
   coffeeButton.click(function() {
@@ -109,33 +150,6 @@ $(document).ready(function(){
     filterButton.removeClass("active");
     lunchButton.addClass("active");
   });
-
-
-
-  // $("#coffeeButton").click(function() {
-  //   $(".coffeeTable").fadeIn(500);
-  //   $("div:not(.coffeeTable)").fadeOut(0);
-  //   $("#coffeeButton").addClass("active");
-  //   $(":not(#coffeeButton)").removeClass("active");
-  // });
-  // $("#bakingButton").click(function() {
-  //   $(".bakingTable").fadeIn(500);
-  //   $("div:not(.bakingTable)").fadeOut(0);
-  //   $("#bakingButton").addClass("active");
-  //   $(":not(#bakingButton)").removeClass("active");
-  // });
-  // $("#breakfastButton").click(function() {
-  //   $(".breakfastTable").fadeIn(500);
-  //   $("div:not(.breakfastTable)").fadeOut(0);
-  //   $("#breakfastButton").addClass("active");
-  //   $(":not(#breakfastButton)").removeClass("active");
-  // });
-  // $("#lunchButton").click(function() {
-  //   $(".lunchTable").fadeIn(500);
-  //   $("div:not(.lunchTable)").fadeOut(0);
-  //   $("#lunchButton").addClass("active");
-  //   $(":not(#lunchButton)").removeClass("active");
-  // });
 
 });
 

@@ -38,7 +38,7 @@
         <a href="#location"><li>Location</li></a>
         <a href="#photos"><li>Photos</li></a>
         <a href="#instagram"><li>Instagram</li></a>
-        <a href="#contact"><li>Contact</li></a>
+        <a href="#contact" class="contactButton"><li>Contact</li></a>
       </ul>
     </div>
 
@@ -54,14 +54,22 @@
     </div>
 
     <div class="contact" id="contact">
-      <div class="contactBackground">
-          <div class="container">
-            <h1>Contact Us</h1>
-            <form class="" action="index.html" method="post">
-              <input type="text" name="" value="">
-              <input type="text" name="" value="">
-            </form>
-          </div>
+      <div class="container">
+        <a class="contactCloseButton"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
+        <div class="contactForm">
+          <h1>CONTACT US</h1>
+          <form>
+            <input type="text" name="" value="" placeholder="Name">
+            <input type="text" name="" value="" placeholder="Email">
+            <textarea rows="8" cols="50" placeholder="Message"></textarea>
+            <input type="button" class="btn submitButton" name="" value="Send Message">
+          </form>
+        </div>
+        <div class="contactSuccess">
+          <p>Thank you for getting in contact with us!</p>
+          <p>We will keep in touch</p>
+          <img src="img/logo.svg" height="68" alt="">
+        </div>
       </div>
     </div>
 
@@ -116,64 +124,72 @@
           </tr>
 
           <tr>
-            <tr>
-              <td>Short Black</td>
-              <td></td>
-              <td>$2.50</td>
-              <td class="td-right"><button class="btn expandButton"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
-            </tr>
-            <tr class="expanded">
-              <td class="description" colspan="3"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></td>
-              <td></td>
-              <td class="td-right"><p class="productTitle">Short Black</p><button class="btn Add"><i class="fa fa-plus" aria-hidden="true"></i> Add to Order</button></td>
-            </tr>
+            <td>Short Black</td>
+            <td></td>
+            <td>$2.50</td>
+            <td class="td-right"><button class="btn expandButton"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+          </tr>
+          <tr class="expanded">
+            <td class="description" colspan="4">
+              <span>The espresso (aka “short black”) is the foundation and the most important part to every espresso based drink. An espresso consists of: <br><br>
+                • 1 Shot of espresso in an espresso cup</span><br><br>
+              <p class="productTitle">Short Black</p><button class="btn Add"><i class="fa fa-plus" aria-hidden="true"></i> Add to Order</button>
+            </td>
           </tr>
 
           <tr>
-            <tr>
-              <td>Short Black</td>
-              <td></td>
-              <td>$2.50</td>
-              <td class="td-right"><button class="btn expandButton"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
-            </tr>
-            <tr class="expanded">
-              <td class="description" colspan="3"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></td>
-              <td></td>
-              <td class="td-right"><p class="productTitle">Short Black</p><button class="btn Add"><i class="fa fa-plus" aria-hidden="true"></i> Add to Order</button></td>
-            </tr>
+            <td>Long Black</td>
+            <td></td>
+            <td>$3.60</td>
+            <td class="td-right"><button class="btn expandButton"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+          </tr>
+          <tr class="expanded">
+            <td class="description" colspan="4">
+              <span>A long black (aka “americano”) is hot water with an espresso shot extracted on top of the hot water. It is made as follows:<br><br>
+                    • Fill a cup with 2/3rds full of hot water<br>
+                    • Extract 1 shot of espresso over the hot water</span><br><br>
+              <p class="productTitle">Long Black</p><button class="btn Add"><i class="fa fa-plus" aria-hidden="true"></i> Add to Order</button>
+            </td>
           </tr>
 
           <tr>
-            <tr>
-              <td>Long Black</td>
-              <td></td>
-              <td>$3.60</td>
-              <td class="td-right"><button class="btn expandButton"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
-            </tr>
-            <tr class="expanded">
-              <td class="description" colspan="3"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></td>
-              <td></td>
-              <td class="td-right"><p class="productTitle">Long Black</p><button class="btn Add"><i class="fa fa-plus" aria-hidden="true"></i> Add to Order</button></td>
-            </tr>
+            <td>Flat White</td>
+            <td></td>
+            <td>$4.00</td>
+            <td class="td-right"><button class="btn expandButton"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
+          </tr>
+          <tr class="expanded">
+            <td class="description" colspan="4">
+              <span>A flat white is a coffee you’ll primarily find in Australia and New Zealand. It is made the same as a cappuccino expect it does not have any foam or chocolate on top. It is made like this:<br><br>
+                • 1 shot of espresso into a cup<br>
+                • Add steamed milk into the cup but no micro-foam</span><br><br>
+              <p class="productTitle">Flat White</p><button class="btn Add"><i class="fa fa-plus" aria-hidden="true"></i> Add to Order</button>
+            </td>
           </tr>
 
+
           <tr>
-            <tr>
-              <td>Flat White</td>
-              <td></td>
-              <td>$4.00</td>
-              <td class="td-right"><button class="btn expandButton"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
-            </tr>
-            <tr class="expanded">
-              <td class="description" colspan="3"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></td>
-              <td>
-                <form class="">
-                  <input type="checkbox" name="" value="">Soy Milk
-                </form>
-              </td>
-              <td class="td-right"><p class="productTitle">Flat White</p><button class="btn Add"><i class="fa fa-plus" aria-hidden="true"></i> Add to Order</button></td>
-            </tr>
+            <td>Cappuccino</td>
+            <td></td>
+            <td>$4.20</td>
+            <td class="td-right"><button class="btn expandButton"><i class="fa fa-list-ul" aria-hidden="true"></i> / <i class="fa fa-plus" aria-hidden="true"></i></button></td>
           </tr>
+          <tr class="expanded">
+            <td class="description" colspan="4">
+              <span>A cappuccino is similar to a latte. However the key difference between a latte and cappuccino is that a cappuccino has more foam and chocolate placed on top of the drink. Further a cappuccino is made in a cup rather than a tumbler glass. It is made as follows:<br><br>
+                    • Extract 1 shot of espresso into a cup<br>
+                    • Add steamed milk<br>
+                    • Add 2-3cm of micro-foam on top of the steamed milk<br>
+                    • Sprinkle chocolate on top of the coffee<br><br></span>
+              <form>
+                <input type="checkbox" name="" value=""> Soy Milk <br>
+                <input type="number" name="" value="" min="0" max="10"> Sugar (teaspoons)
+              </form>
+              <br>
+              <p class="productTitle">Cappuccino</p><button class="btn Add"><i class="fa fa-plus" aria-hidden="true"></i> Add to Order</button>
+            </td>
+          </tr>
+
 
         </table>
 
