@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nikau Cafe</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="scss/style.css">
+
+    <style>
+    .location {
+      border-left: 1px solid lightGrey;
+    }
+    </style>
+  </head>
+  <body id="top">
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#top"><img src="img/logo.svg" height="68" alt="Nikau Cafe"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="contact" id="contact">
+      <div class="container">
+        <a class="contactCloseButton"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
+        <div class="contactForm">
+          <h1>CONTACT US</h1>
+          <form>
+            <input type="text" name="" value="" placeholder="Name">
+            <input type="text" name="" value="" placeholder="Email">
+            <textarea rows="8" cols="50" placeholder="Message"></textarea>
+            <input type="button" class="btn submitButton" name="" value="Send Message">
+          </form>
+        </div>
+        <div class="contactSuccess">
+          <p>Thank you for getting in contact with us!</p>
+          <p>We will keep in touch</p>
+          <img src="img/logo.svg" height="68" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="orderContainer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="orderConfirm col-md-6">
+            <h2>Please confirm your order</h2>
+            <p>Your Order:</p>
+            <ul id="Cart">
+
+            </ul>
+
+            <form>
+              <input type="checkbox" name="" value="" required> I agree to the Nikau Cafe Terms and Conditions<br>
+              <button type="submit" class="btn confirmOrderButton"><i class="fa fa-check" aria-hidden="true"></i> Confirm Order</button>
+            </form>
+          </div>
+          <!-- <div class="orderComplete col-md-6">
+            <h2>Order has been placed!</h2>
+            <p>Your Order:</p>
+            <ul id="Cart">
+
+            </ul>
+            <div class="estTime">
+              <p>Approximate wait time is 5 minutes</p>
+              <div class="autologouttimer"><div id="progressbar" class="progressbar color-blue"></div><span>5 min.</span></div>
+              <p>Please pay at the counter.</p>
+
+              <a href="index.html"><button class="btn backHomeButton"><i class="fa fa-undo" aria-hidden="true"></i> Back to Home</button></a>
+            </div>
+          </div> -->
+
+
+          <div class="location col-md-6" id="location">
+            <h1>location</h1>
+            <h2>Civic Square, 101 Wakefield Street<br>Wellington 6011</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1260.4761117451164!2d174.77765801469675!3d-41.288533877906815!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x63ea367e599b5c7d!2sNikau+Cafe!5e0!3m2!1sen!2suk!4v1493686834538" width="90%" height="400" style="border:0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <h3><a href="#top">NIKAU CAFE</a></h3>
+        <p>For educational purposes only.</p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/CartFunction.js" ></script>
+  </body>
+</html>

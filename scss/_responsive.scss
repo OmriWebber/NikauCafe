@@ -1,25 +1,37 @@
-@media only screen and (min-width : 320px) {
+@media only screen and (max-width : 320px) {
 
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
-
+@media only screen and (max-width : 480px) {
+  footer ul {
+    display: none !important;
+  }
+  table tr th {
+    font-size: 24px !important;
+  }
 }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-  .navbar {
-    background-color: blue;
+@media only screen and (max-width : 768px) {
+  .navbar li {
+    float: left;
+    margin: 0 15px 0 15px;
+  }
+
+  .floatRight {
+    float: right !important;
   }
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-
+@media only screen and (max-width : 992px) {
+  .filterBar {
+    height: auto !important;
+  }
 }
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
+@media only screen and (max-width : 1200px) {
 
 }

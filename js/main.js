@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
 	// Menu Expand Variables
 	var expanded = $(".expanded");
 	var expandButton = $(".expandButton");
@@ -31,21 +31,11 @@ $(document).ready(function(){
   var cartButton = $(".cartButton");
   var cartDropdown = $(".cartDropdown");
 
-  // Slideshow
-  var slideIndex = 0;
-  carousel();
+	// Misc Variables
+	var orderButton = $(".orderBtn");
 
-  function carousel() {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > x.length) {slideIndex = 1}
-      x[slideIndex-1].style.display = "block";
-      setTimeout(carousel, 5000);
-  }
+	// Countdown Timer for FoodReady Timer
+	$('#progressbar').animate({width: '0'}, 300000, 'linear');
 
   //Expanded menu show/hide
 	hamburgerMenu.click(function(){
@@ -106,6 +96,16 @@ $(document).ready(function(){
 		}
 	});
 
+	//CartDropdown Show/Hide
+	orderButton.click(function(){
+		cartDropdown.fadeIn('500');
+		cartDropdown.show();
+		if (cartDropdown.is(":visible")) {
+			cartDropdown.delay(2000).fadeOut('');
+		}
+	});
+
+	// Menu Item Expand
 	$(function() {
     $(expandButton).click(function(event) {
         event.stopPropagation();
@@ -154,10 +154,10 @@ $(document).ready(function(){
 });
 
 // Smooth Scrolling between anchor links to divs
-$(document).on('click', 'a', function(event){
-  event.preventDefault();
-
-  $('html, body').animate({
-      scrollTop: $( $.attr(this, 'href') ).offset().top
-  }, 500);
-});
+// $(document).on('click', 'a', function(event){
+//   event.preventDefault();
+//
+//   $('html, body').animate({
+//       scrollTop: $( $.attr(this, 'href') ).offset().top
+//   }, 500);
+// });

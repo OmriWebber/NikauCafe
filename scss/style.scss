@@ -8,13 +8,19 @@
   padding: 0px;
 }
 
+.btn {
+  background-color: $primaryColor;
+  color: $secondaryColor;
+  transition: all 0.4s;
+}
+
 .navbar {
   height: 100px;
   z-index: 999;
   position: fixed;
   width: 100%;
   margin-bottom: 0px;
-  background-color: white; 
+  background-color: white;
   box-shadow: 0px 4px 42px -9px rgba(0,0,0,0.75);
   border-radius: 0px;
 
@@ -96,7 +102,7 @@
 .cartDropdown {
   position: fixed;
   display: none;
-  background-color: rgba(240,240,240,0.95);
+  background-color: rgba(240,240,240,0.90);
   width: 100%;
   z-index: 9999;
   top: 100px;
@@ -106,7 +112,13 @@
     text-align: center;
     padding: 40px;
 
+    h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
     ul {
+      margin-bottom: 20px;
 
       li {
         text-decoration: none;
@@ -155,8 +167,6 @@
       }
 
       .submitButton {
-        background-color: $primaryColor;
-        color: $secondaryColor;
         position: relative;
         border: none;
         padding: 10px;
@@ -230,6 +240,68 @@
   }
 }
 
+.orderComplete, .orderConfirm {
+  padding-top: 200px;
+  text-align: center;
+  float:left;
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 60px;
+  }
+
+  ul {
+    margin-bottom: 40px;
+    li {
+      list-style-type: none;
+      font-size: 28px;
+    }
+  }
+
+  .backHomeButton, .confirmOrderButton {
+    margin-top: 20px;
+  }
+
+  .autologouttimer {
+    position: relative;
+    margin: 0 auto 40px;
+    padding: 3px 0;
+    width: 275px;
+    height: 20px;
+    background-color: transparent;
+    text-align: center;
+    -webkit-box-shadow: inset -2px -2px 0px 0px rgba(250,250,250,0.75);
+    -moz-box-shadow: inset -1px -1px 0px 0px rgba(250,250,250,0.75);
+    box-shadow: inset -1px -1px 0px 0px rgba(250,250,250,0.75);
+    background-color: rgb(143, 143, 143);
+    border-radius: 15px;
+
+    span {
+    	font-family: 'Arimo', sans-serif;
+    	font-weight: bold;
+      color: #FFF;
+    	font-size: 14px;
+    	line-height: 15px;
+      top: -2px;
+    	position: relative;
+    }
+
+    .progressbar {
+    	float: left;
+    	position: absolute;
+    	top: -3px;
+    	left: 0px;
+    	margin: 5px;
+    	width: 265px;
+    	height: 15px;
+    	border: 0px;
+    	border-radius: 15px;
+      background-color: $primaryColor;
+    }
+  }
+}
+
 .menu {
   background: url("../img/img-broccoli.jpg") no-repeat center;
   background-size: cover;
@@ -276,11 +348,12 @@
       }
 
       div {
-        padding: 32px 0;
+        padding: 34px 0;
         text-align: center;
         color: black;
         transition: all 0.2s;
         cursor: pointer;
+        border-bottom: 1px solid $secondaryColor;
       }
       div:hover {
         background-color: Grey;
@@ -291,11 +364,11 @@
     table {
     border-collapse: collapse;
     width: 95%;
+    max-width: 100%;
     margin: 40px auto 0;
 
-      button {
-        background-color: $primaryColor;
-        color: $secondaryColor;
+      .orderBtn {
+        margin-right: 10px;
       }
 
       // Sets default for display
@@ -323,8 +396,14 @@
   }
 }
 
+
 .location {
-  padding: 150px 0;
+  padding: 200px 0 100px;
+
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
 
   h1 {
     font-size: 32px;
@@ -382,9 +461,14 @@
   }
 
   h3 {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-weight: 300;
     letter-spacing: 1px;
+  }
+
+  .instagramButton:hover {
+    background-color: darken($primaryColor, 10%);
+    color: $secondaryColor;
   }
 }
 
