@@ -96,6 +96,7 @@ input, select {
   font-family: 'TravelingTypewriter';
   src: url("font/TravelingTypewriter.ttf") format("ttf"), url("font/TravelingTypewriter.otf") format("otf");
 }
+
 body {
   font-family: "TravelingTypewriter", "Open Sans", sans-serif;
 }
@@ -111,9 +112,13 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn {
-  background-color: #bd3b2b;
-  color: white;
+  background-color: #BD3B2B;
+  color: #ffffff !important;
   transition: all 0.4s;
+}
+
+.maori {
+  display: none;
 }
 
 .navbar {
@@ -126,11 +131,13 @@ h1, h2, h3, h4, h5 {
   box-shadow: 0px 4px 42px -9px rgba(0, 0, 0, 0.75);
   border-radius: 0px;
 }
+
 .navbar .navbar-brand {
   transform: translateX(-50%);
   left: 51%;
   position: absolute;
 }
+
 .navbar .navbar-nav {
   margin-top: 20px;
 }
@@ -156,21 +163,24 @@ h1, h2, h3, h4, h5 {
   text-align: center;
   background-color: rgba(240, 240, 240, 0.95);
 }
+
 .dropdownNav ul a {
   text-decoration: none;
   color: black;
 }
+
 .dropdownNav ul a li {
   padding: 20px 0;
   width: 100%;
 }
+
 .dropdownNav ul a li:hover {
   background-color: rgba(200, 200, 200, 0.95);
-  color: #bd3b2b;
+  color: #BD3B2B;
 }
 
 .cartCountBg {
-  background-color: #bd3b2b;
+  background-color: #BD3B2B;
   border-radius: 10px;
   width: 16px;
   height: 16px;
@@ -199,18 +209,22 @@ h1, h2, h3, h4, h5 {
   z-index: 9999;
   top: 100px;
 }
+
 .cartDropdown .container {
   margin: 0 auto;
   text-align: center;
   padding: 40px;
 }
+
 .cartDropdown .container h2 {
   margin-bottom: 10px;
   font-size: 24px;
 }
+
 .cartDropdown .container ul {
   margin-bottom: 20px;
 }
+
 .cartDropdown .container ul li {
   text-decoration: none;
   list-style-type: none;
@@ -224,15 +238,18 @@ h1, h2, h3, h4, h5 {
   position: fixed;
   display: none;
 }
+
 .contact .container {
   background-color: white;
   margin-top: 120px;
   padding: 40px 20px;
 }
+
 .contact .container h1 {
   text-align: center;
   font-size: 32px;
 }
+
 .contact .container .contactCloseButton {
   float: right;
   margin-top: -30px;
@@ -240,10 +257,12 @@ h1, h2, h3, h4, h5 {
   color: black;
   cursor: pointer;
 }
+
 .contact .container form {
   margin: 80px;
   margin-top: 20px;
 }
+
 .contact .container form input, .contact .container form textarea {
   width: 100%;
   margin: 15px 0;
@@ -252,6 +271,7 @@ h1, h2, h3, h4, h5 {
   background-color: #f1f1f1;
   padding: 10px;
 }
+
 .contact .container form .submitButton {
   position: relative;
   border: none;
@@ -259,10 +279,12 @@ h1, h2, h3, h4, h5 {
   width: auto;
   float: right;
 }
+
 .contact .container .contactSuccess {
   text-align: center;
   display: none;
 }
+
 .contact .container .contactSuccess p {
   margin: 10px 0;
   font-size: 28px;
@@ -277,39 +299,60 @@ h1, h2, h3, h4, h5 {
   color: white;
   text-shadow: 0px 0px 10px #000000;
 }
+
 .hero .caption h1 {
   font-size: 60px;
 }
+
 .hero .caption h3 {
   font-size: 30px;
+}
+
+.slideshow .mySlides {
+  width: 100%;
+  height: 80vh;
+  min-height: 650px;
 }
 
 .slideshow .coffee {
   background: url("../img/img-coffee.jpg") no-repeat center;
   background-size: cover;
+  background-attachment: fixed;
 }
+
 .slideshow .kitchen {
   background: url("../img/img-kitchen.jpg") no-repeat center;
   background-size: cover;
+  background-attachment: fixed;
 }
+
 .slideshow .citrus {
   background: url("../img/img-citrus.jpg") no-repeat center;
   background-size: cover;
+  background-attachment: fixed;
 }
+
 .slideshow .ravioli {
   background: url("../img/img-ravioli.jpg") no-repeat center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .about {
   padding: 80px 0;
   font-family: "Montserrat", sans-serif;
 }
+
 .about .container {
   text-align: center;
 }
+
 .about .container p {
   line-height: 40px;
+}
+
+.orderComplete {
+  display: none;
 }
 
 .orderComplete, .orderConfirm {
@@ -317,21 +360,26 @@ h1, h2, h3, h4, h5 {
   text-align: center;
   float: left;
 }
+
 .orderComplete h2, .orderConfirm h2 {
   margin-bottom: 20px;
   font-size: 30px;
   line-height: 60px;
 }
+
 .orderComplete ul, .orderConfirm ul {
   margin-bottom: 40px;
 }
+
 .orderComplete ul li, .orderConfirm ul li {
   list-style-type: none;
   font-size: 28px;
 }
+
 .orderComplete .backHomeButton, .orderComplete .confirmOrderButton, .orderConfirm .backHomeButton, .orderConfirm .confirmOrderButton {
   margin-top: 20px;
 }
+
 .orderComplete .autologouttimer, .orderConfirm .autologouttimer {
   position: relative;
   margin: 0 auto 40px;
@@ -346,6 +394,7 @@ h1, h2, h3, h4, h5 {
   background-color: #8f8f8f;
   border-radius: 15px;
 }
+
 .orderComplete .autologouttimer span, .orderConfirm .autologouttimer span {
   font-family: 'Arimo', sans-serif;
   font-weight: bold;
@@ -355,6 +404,7 @@ h1, h2, h3, h4, h5 {
   top: -2px;
   position: relative;
 }
+
 .orderComplete .autologouttimer .progressbar, .orderConfirm .autologouttimer .progressbar {
   float: left;
   position: absolute;
@@ -365,15 +415,17 @@ h1, h2, h3, h4, h5 {
   height: 15px;
   border: 0px;
   border-radius: 15px;
-  background-color: #bd3b2b;
+  background-color: #BD3B2B;
 }
 
 .menu {
   background: url("../img/img-broccoli.jpg") no-repeat center;
   background-size: cover;
+  background-attachment: fixed;
   width: 100%;
   padding: 100px 0 50px 0;
 }
+
 .menu h1 {
   text-align: center;
   color: white;
@@ -381,64 +433,79 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 80px;
   text-shadow: 0px 0px 10px #000000;
 }
+
 .menu .container {
   background-color: white;
   height: auto;
   padding: 0px;
   padding-bottom: 20px;
 }
+
 .menu .container .menuTable .expanded {
   border-bottom: 20px solid white;
 }
+
 .menu .container .menuTable .expanded .description {
   text-align: center;
 }
+
 .menu .container .bakingTable, .menu .container .breakfastTable, .menu .container .lunchTable {
   display: none;
 }
+
 .menu .container .filterBar {
   background-color: lightGrey;
   width: 100%;
   height: 84px;
 }
+
 .menu .container .filterBar .active {
   background-color: grey;
   color: white;
 }
+
 .menu .container .filterBar div {
   padding: 34px 0;
   text-align: center;
   color: black;
   transition: all 0.2s;
   cursor: pointer;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #ffffff;
 }
+
 .menu .container .filterBar div:hover {
   background-color: Grey;
   color: white;
 }
+
 .menu .container table {
   border-collapse: collapse;
   width: 95%;
   max-width: 100%;
   margin: 40px auto 0;
 }
+
 .menu .container table .orderBtn {
   margin-right: 10px;
 }
+
 .menu .container table .expanded {
   display: none;
 }
+
 .menu .container th, .menu .container td {
   text-align: left;
   padding: 8px;
 }
+
 .menu .container .td-right {
   text-align: right;
 }
+
 .menu .container tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+
 .menu .container th {
   font-size: 32px;
 }
@@ -446,20 +513,24 @@ h1, h2, h3, h4, h5 {
 .location {
   padding: 200px 0 100px;
 }
+
 .location iframe {
   display: block;
   margin: 0 auto;
 }
+
 .location h1 {
   font-size: 32px;
   line-height: 60px;
 }
+
 .location h2 {
   font-weight: 300;
   letter-spacing: 1px;
   line-height: 30px;
   margin-bottom: 50px;
 }
+
 .location h1, .location h2 {
   text-align: center;
 }
@@ -473,12 +544,14 @@ h1, h2, h3, h4, h5 {
   height: 90vh;
   width: 100%;
 }
+
 .photos .collage {
   background: url("../img/img-collage.jpg") no-repeat center;
   background-size: cover;
   width: 100%;
   height: 100%;
 }
+
 .photos .collage h1 {
   width: 100%;
   position: absolute;
@@ -496,55 +569,66 @@ h1, h2, h3, h4, h5 {
   margin: 0 auto;
   padding: 90px 0;
 }
+
 .instagram h2 {
   line-height: 60px;
 }
+
 .instagram h3 {
   margin-bottom: 20px;
   font-weight: 300;
   letter-spacing: 1px;
 }
+
 .instagram .instagramButton:hover {
   background-color: #932e22;
-  color: white;
+  color: #ffffff;
 }
 
 footer {
-  background-color: #bd3b2b;
+  background-color: #BD3B2B;
   color: white;
   padding: 60px 0;
 }
+
 footer ul {
   width: 100%;
   margin: 0 auto 30px;
   text-align: center;
 }
+
 footer ul li {
   display: inline;
   margin: 0 10px;
 }
+
 footer ul li a {
   color: white;
   transition: all 0.2s;
   font-family: "Montserrat", sans-serif;
 }
+
 footer ul li a:hover {
-  color: black;
+  color: #000000;
   text-decoration: none;
 }
+
 footer p {
   text-align: center;
   font-size: 8px;
   margin-top: 20px;
 }
+
 footer h3 {
   text-align: center;
   font-weight: 600;
   letter-spacing: 3px;
 }
+
 footer h3 a {
   color: white;
 }
+
 footer h3 a:hover {
   color: white;
   text-decoration: none;
@@ -555,26 +639,27 @@ footer h3 a:hover {
   footer ul {
     display: none !important;
   }
-
   table tr th {
     font-size: 24px !important;
   }
 }
+
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   .navbar li {
     float: left;
     margin: 0 15px 0 15px;
   }
-
   .floatRight {
     float: right !important;
   }
 }
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   .filterBar {
     height: auto !important;
   }
 }
+
 /* Large Devices, Wide Screens */

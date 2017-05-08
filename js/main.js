@@ -33,9 +33,33 @@ $(document).ready(function() {
 
 	// Misc Variables
 	var orderButton = $(".orderBtn");
+	var orderComplete = $(".orderComplete");
+	var orderConfirm = $(".orderConfirm");
+	var confirmOrderButton = $(".confirmOrderButton");
+
+	// Translation variables
+	var maori = $(".maori");
+	var english = $(".english");
+	var translateButton = $(".translateButton");
 
 	// Countdown Timer for FoodReady Timer
 	$('#progressbar').animate({width: '0'}, 300000, 'linear');
+
+	translateButton.click(function(){
+		if (maori.is(":visible")) {
+			maori.fadeOut('');
+			maori.hide('');
+			english.delay('slow').fadeIn('500');
+			english.delay('slow').show('');
+		}
+		else {
+			english.fadeOut('');
+			english.hide('');
+			maori.delay('slow').fadeIn('500');
+			maori.delay('slow').show('');
+		}
+	});
+
 
   //Expanded menu show/hide
 	hamburgerMenu.click(function(){
@@ -151,13 +175,10 @@ $(document).ready(function() {
     lunchButton.addClass("active");
   });
 
-});
+	confirmOrderButton.click(function(){
+		  orderComplete.fadeIn('500');
+			orderComplete.show();
+			orderConfirm.hide();
+	});
 
-// Smooth Scrolling between anchor links to divs
-// $(document).on('click', 'a', function(event){
-//   event.preventDefault();
-//
-//   $('html, body').animate({
-//       scrollTop: $( $.attr(this, 'href') ).offset().top
-//   }, 500);
-// });
+});

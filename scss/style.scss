@@ -10,8 +10,12 @@
 
 .btn {
   background-color: $primaryColor;
-  color: $secondaryColor;
+  color: $secondaryColor !important;
   transition: all 0.4s;
+}
+
+.maori {
+  display: none;
 }
 
 .navbar {
@@ -207,23 +211,34 @@
 }
 
 
-// Using CSS to get the images to allow for easier resizing through devices
+
 .slideshow {
+  .mySlides {
+    width: 100%;
+    height: 80vh;
+    min-height: 650px;
+  }
+
+// Using CSS to get the images to allow for easier resizing through devices
   .coffee {
     background: url("../img/img-coffee.jpg") no-repeat center;
     background-size: cover;
+    background-attachment: fixed;
   }
   .kitchen {
     background: url("../img/img-kitchen.jpg") no-repeat center;
     background-size: cover;
+    background-attachment: fixed;
   }
   .citrus {
     background: url("../img/img-citrus.jpg") no-repeat center;
     background-size: cover;
+    background-attachment: fixed;
   }
   .ravioli {
     background: url("../img/img-ravioli.jpg") no-repeat center;
     background-size: cover;
+    background-attachment: fixed;
   }
 }
 
@@ -238,6 +253,10 @@
       line-height: 40px;
     }
   }
+}
+
+.orderComplete {
+  display: none;
 }
 
 .orderComplete, .orderConfirm {
@@ -305,6 +324,7 @@
 .menu {
   background: url("../img/img-broccoli.jpg") no-repeat center;
   background-size: cover;
+  background-attachment: fixed;
   width: 100%;
   padding: 100px 0 50px 0;
 
